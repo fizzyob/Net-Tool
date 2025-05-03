@@ -791,3 +791,5 @@ DOMAIN-REGEX,*.ffzy-play?.com
 DOMAIN-REGEX,*.lz-cdn?.com
 DOMAIN-REGEX,*.lz-cdn??.com
 DOMAIN-REGEX,*.qhimgs?.com
+DOMAIN-SUFFIX,8090666.xyz
+DOMAIN-SUFFIX,666213.xyz
