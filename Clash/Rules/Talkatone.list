@@ -1,30 +1,31 @@
-# 以下为该软件部分去广告规则
-DOMAIN-SUFFIX,ads.inmobi.com,REJECT-DROP
-DOMAIN-SUFFIX,tappx.com,REJECT-DROP
-DOMAIN-SUFFIX,criteo.com,REJECT-DROP
-DOMAIN-SUFFIX,pubmatic.com,REJECT-DROP
-DOMAIN-SUFFIX,smaato.net,REJECT-DROP
-DOMAIN-SUFFIX,amazon-adsystem.com,REJECT-DROP
-DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT-DROP
-DOMAIN-SUFFIX,adsappier.com,REJECT-DROP
-DOMAIN-SUFFIX,appier.net,REJECT-DROP
-DOMAIN-SUFFIX,appiersig.com,REJECT-DROP
+#!name=Talkatone
+#!desc=Talkatone 全局代理规则集
+# 本规则集的目的是代理 Talkatone 的全部已知地址，也就是全局代理其服务，使其完全避免使用中国大陆的网络访问。使用本集时该服务对节点要求很高，请谨慎使用
+# 整理作者：https://github.com/LOWERTOP
+# 仓库地址：https://github.com/LOWERTOP/Shadowrocket-First
+# 类型选择：RULE-SET
+# 策略建议：PROXY
 
-# 以下为该软件需要走代理的规则
-DOMAIN-SUFFIX,tktn.be,PROXY
+# 以下规则必须走代理
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,tktn.be
+# 语音留言地址，需要代理
+DOMAIN-SUFFIX,vm.talkatone.com
+# 贴图服务
+DOMAIN-SUFFIX,tenor.com
 
-# 以下为该软件需要走直连的规则
-DOMAIN-SUFFIX,inner-active.mobi,DIRECT
-DOMAIN-SUFFIX,mobilefuse.com,DIRECT
-DOMAIN-SUFFIX,inmobi.com,DIRECT
-DOMAIN-SUFFIX,crashlytics.com,DIRECT
-DOMAIN-SUFFIX,talkatone.com,DIRECT
-DOMAIN-SUFFIX,kochava.com,DIRECT
-DOMAIN-SUFFIX,cohere.com,DIRECT
-DOMAIN-SUFFIX,ip-api.com,DIRECT
-DOMAIN-SUFFIX,agkn.com,DIRECT
-DOMAIN-SUFFIX,tktn.at,DIRECT
-IP-CIDR,50.117.27.0/24,DIRECT
-IP-CIDR,69.46.75.0/24,DIRECT
-IP-CIDR,205.164.56.0/24,DIRECT
-IP-CIDR,63.251.124.0/24,DIRECT
+# 以下规则其实可以走直连
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,inner-active.mobi
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,kochava.com
+DOMAIN-SUFFIX,mobilefuse.com
+DOMAIN-SUFFIX,talkatone.com
+IP-CIDR,205.164.56.0/24,no-resolve
+IP-CIDR,216.172.154.0/24,no-resolve
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve
+IP-CIDR,69.46.75.0/24,no-resolve
